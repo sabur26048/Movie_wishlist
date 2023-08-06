@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOvieQ</title>
+  <link rel="stylesheet" href="../public/stylesheets/style.css" />
+
+  <!-- TODO: MODULE_LAYOUT -->
+  <!-- 1. Create a <link> to the first stylesheet needed for Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-success">
+
+  <!-- TODO: MODULE_LAYOUT -->
+  <!-- 1. Use appropriate css classes on nav element. -->
+  <!-- 2. Add child elements as required. -->
+  <% const SignUp="SignUp"
+  const SignIn="SignIn"  ;
+  if(name) {
+  SignUp=name;
+  SignIn="You Are Signed";
+   }
+  %>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light"> 
+    <a class="navbar-brand" href="/"><h1>MOvieQ</h1></a>
+    <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
+      <ul class="navbar-nav d-flex justify-content-left w-100">
+        <li class="nav-item active">
+          <a class="nav-link" href="">Home</a>
+        </li>
+      </ul>
+      <ul class=" navbar-nav d-flex justify-content-end w-100">
+         <li class="nav-item active">
+          <a class="nav-link" href="signup"><%=SignUp%></a>
+        </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="signin"><%=SignIn%></a>
+      </li>
+     </ul>
+    </div>  
+    </nav>
+
+
+
+    <div class="container d-flex justify-content-center mt-2"><h1>WELCOME TO MOvieQ</h1></div>
+    <form action="/movieList" method="get" class="form-outline w-75 container d-flex justify-content-center mt-2">
+      <input type="search" id="form1" class="form-control bg-dark" placeholder="Search In MOvieQ" aria-label="Search" />
+    </form>
+
+    <div class="container d-flex  justify-content-center mt-2"><h2>List of Movies</h2></div>
+
+    <div class="container d-flex  justify-content-center ">
+      <form class="m-4 " action="/movieList" method="get">
+        <h3>New Movies</h3>
+        <img src="../public/images/images.jpg" alt="loading">
+        <input class="d-block mt-2 btn btn-outline-info text-dark" type="submit" value="Search">
+      </form>
+
+    <form class="m-4 " action="/movieList" method="get">
+      <h3>TOP imdb Movies</h3>
+      <img src="../public/images/images.jpg" alt="loading">
+      <input class="d-block mt-2 btn btn-outline-info text-dark" type="submit" value="Search">
+    </form>
+
+    <form class="m-4 " action="/movieList" method="get">
+      <h3>Bolywood Movies</h3>
+      <img src="../public/images/images.jpg" alt="loading">
+      <input class="d-block mt-2 btn btn-outline-info text-dark" type="submit" value="Search">
+    </form>
+    
+    </div>
+
+<footer >
+  <div class="container d-flex  justify-content-center mt-2 fixed-bottom">© MOvieQ 2023</div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>

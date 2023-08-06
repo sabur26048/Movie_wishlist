@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOvieQ</title>
+  <link rel="stylesheet" href="../public/stylesheets/style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-success">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light"> 
+    <a class="navbar-brand" href="/"><h1>MOvieQ</h1></a>
+    <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
+      <ul class="navbar-nav d-flex justify-content-left w-100">
+        <li class="nav-item active">
+          <a class="nav-link" href="home">Home</a>
+        </li>
+      </ul>
+      <ul class=" navbar-nav d-flex justify-content-end w-100">
+         <li class="nav-item active">
+          <a class="nav-link" href="signup">SignUp</a>
+        </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="signin">SignIn</a>
+      </li>
+     </ul>
+    </div>  
+    </nav>
+
+    <div class="container d-flex justify-content-center mt-2"><h1>SIGN-IN</h1></div>
+
+      <div class="container d-flex justify-content-center mt-2 bg-light w-25 rounded">
+    <form  action="/userSigining" method="post" class="m-4">
+        <div class="form-group">
+          <label for="exampleInputEmail1" >Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" >Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary mb-5">Submit</button>
+      </form>
+    </div>
+
+    <footer >
+        <div class="container d-flex justify-content-center mt-2 fixed-bottom">© MOvieQ 2023</div>
+      </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
